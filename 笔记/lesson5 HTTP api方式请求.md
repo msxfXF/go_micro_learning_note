@@ -35,3 +35,12 @@ func CallHttpAPI(address string, path string, method string, body []byte) (strin
 ```
 ### 效果
 ![img_9.png](img_9.png)
+
+另外：
+- `[]byte`转`io.Reader`使用`bytes.NewReader()`
+- `io.Reader`转`[]byte`使用`bytes.Buffer{}`
+```go
+buf := &bytes.Buffer{}
+buf.ReadFrom(ioReaderData)
+```
+![img_10.png](img_10.png)
