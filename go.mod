@@ -5,6 +5,7 @@ go 1.19
 require (
 	github.com/asim/go-micro/v3 v3.7.1
 	github.com/gin-gonic/gin v1.8.1
+	github.com/go-micro/plugins/v3/client/http v1.0.0
 	github.com/go-micro/plugins/v3/registry/consul v1.0.0
 )
 

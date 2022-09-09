@@ -43,4 +43,4 @@ func CallHttpAPI(address string, path string, method string, body []byte) (strin
 buf := &bytes.Buffer{}
 buf.ReadFrom(ioReaderData)
 ```
-![img_10.png](img_10.png)
+![img_10_1.png](img_10_1.png)
