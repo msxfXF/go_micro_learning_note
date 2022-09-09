@@ -177,6 +177,8 @@ github.com/go-gl/glfw/v3.3/glfw v0.0.0-20200222043503-6f7a984d4dc4/go.mod h1:tQ2
 github.com/go-kit/kit v0.8.0/go.mod h1:xBxKIO96dXMWWy0MnWVtmwkA9/13aqxPnvrjFYMA2as=
 github.com/go-logfmt/logfmt v0.3.0/go.mod h1:Qt1PoO58o5twSAckw1HlFXLmHsOX5/0LbT9GBnD5lWE=
 github.com/go-logfmt/logfmt v0.4.0/go.mod h1:3RMwSq7FuexP4Kalkev3ejPJsZTpXXBr9+V4qmtdjCk=
+github.com/go-micro/plugins/v3/client/http v1.0.0 h1:b7XhhtdRDEiRZZtXUgXglggtzyCQuyOzaLIQrfUchjc=
+github.com/go-micro/plugins/v3/client/http v1.0.0/go.mod h1:vhBV3t4B9usCGZF5rDhjOWAhaWHfZC2d+6ZPkHVQQMg=
 github.com/go-micro/plugins/v3/registry/consul v1.0.0 h1:yMkrSrr2Ki7t4bEwn0NI7XxQjKlg9qQhWYekb4g629I=
 github.com/go-micro/plugins/v3/registry/consul v1.0.0/go.mod h1:AojiiEfDK4PfjvGyCWhmlMNz9RNMSlhAX0ddvxE0hAw=
 github.com/go-playground/assert/v2 v2.0.1 h1:MsBgLAaY856+nPRTKrp3/OZK38U/wa0CcBYNjji3q3A=
