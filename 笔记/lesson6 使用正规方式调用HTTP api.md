@@ -37,4 +37,4 @@ http.NewClient其中ContentType需要有 "application/json"
 最后调用call方法，取回返回结果。
 
 ### 运行结果
-![img_10.png](img_10.png)
+![img_10.png](img_10_1.png)
