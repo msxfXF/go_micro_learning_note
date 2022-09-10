@@ -7,7 +7,7 @@ type User struct {
 	Name string
 }
 
-func GetUserList(num int) (u []*User) {
+func GetUserList(num int64) (u []*User) {
 	u = make([]*User, num)
 	for i, _ := range u {
 		u[i] = &User{

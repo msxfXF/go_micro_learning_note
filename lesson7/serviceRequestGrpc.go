@@ -8,6 +8,7 @@ import (
 	"github.com/go-micro/plugins/v3/client/http"
 	"github.com/go-micro/plugins/v3/registry/consul"
 	"log"
+	"micro/helloworld2/lesson7/Models"
 	"time"
 )
 
@@ -19,22 +20,22 @@ func main() {
 			selector.SetStrategy(selector.RoundRobin),
 		)
 		res, err := CallAPI(mySelector)
-		if err != nil {
+		if err != nil && res != nil {
 			log.Println(err)
 		}
-		log.Println(res["data"])
+		log.Println(res.Data)
 		time.Sleep(time.Second)
 	}
 }
 
-func CallAPI(s selector.Selector) (map[string]interface{}, error) {
+func CallAPI(s selector.Selector) (*Models.UserResp, error) {
 
 	myClient := http.NewClient(client.Selector(s), client.ContentType("application/json"))
-	req := myClient.NewRequest("user", "/v1/user", map[string]string{})
-	rsp := map[string]interface{}{}
+	req := myClient.NewRequest("user", "/v1/user", Models.UserReq{Size: 1})
+	rsp := Models.UserResp{}
 	err := myClient.Call(context.Background(), req, &rsp)
 	if err != nil {
 		return nil, err
 	}
-	return rsp, err
+	return &rsp, err
 }

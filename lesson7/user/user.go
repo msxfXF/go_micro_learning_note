@@ -18,7 +18,16 @@ func main() {
 
 	v1 := r.Group("/v1")
 	v1.Handle("POST", "/user", func(context *gin.Context) {
-		context.JSON(200, gin.H{"data": GetUserList(5)})
+		//req := Models.UserReq{}
+		//err := context.Bind(&req)
+		req := struct {
+			Size int64 `form:"size"`
+		}{}
+		err := context.Bind(&req)
+		if err != nil {
+			context.JSON(200, gin.H{"data": GetUserList(2)})
+		}
+		context.JSON(200, gin.H{"data": GetUserList(req.Size)})
 	})
 
 	server := web.NewService(
