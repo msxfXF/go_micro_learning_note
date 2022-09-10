@@ -12,5 +12,5 @@ message getUserListResp{
 }
 
 service UserService{
-  rpc getUserList(getUserListReq) returns (getUserListResp);
+  rpc GetUserList(getUserListReq) returns (getUserListResp);
 }

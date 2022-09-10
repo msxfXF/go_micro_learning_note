@@ -13,7 +13,7 @@ func main() {
 	csRegistry := consul.NewRegistry(registry.Addrs("20.124.120.120:8500"))
 	mService := micro.NewService(
 		micro.Address(":8003"),
-		micro.Name("grpc.user"),
+		micro.Name("Grpc"),
 		micro.Registry(csRegistry),
 	)
 	mService.Init()
@@ -21,6 +21,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	mService.Run()
+	err = mService.Run()
+	if err != nil {
+		log.Fatal(err)
+	}
 
 }
