@@ -1,6 +1,10 @@
 ## 正规方式调用HTTP api
 上节课使用手动方式调用，这次使用正规方式插件调用。
 
+使用 go-plugins组件
+
+`go get github.com/go-micro/plugins`
+
 ```go
 func CallAPI(s selector.Selector) (map[string]interface{}, error) {
 

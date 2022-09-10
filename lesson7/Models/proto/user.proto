@@ -1,0 +1,14 @@
+syntax = "proto3";
+option go_package="./;Models"; //生成go的目录；生成的包名
+package Models;
+
+message UserModel{
+  int64 ID=1;
+  string Name=2;
+}
+message UserResp{
+  repeated UserModel data=1;
+}
+message  UserReq{
+  int64 size=1;
+}
